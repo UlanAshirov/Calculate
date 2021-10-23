@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Calculate</string>
+    <string name="clear">AC</string>
+    <string name="num_seven">7</string>
+    <string name="num_eight">8</string>
+    <string name="num_nine">9</string>
+    <string name="div">/</string>
+    <string name="mul">x</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="equal">=</string>
+    <string name="zero">0</string>
+</resources>
