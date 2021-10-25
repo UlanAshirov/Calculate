@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean minus = false;
     private boolean mul = false;
     private boolean div = false;
+    private boolean equalClicked = false;
 
 
     @Override
@@ -30,159 +31,129 @@ public class MainActivity extends AppCompatActivity {
     public void onNumberClick(View view) {
         switch (view.getId()) {
             case R.id.num_one:
-                if (tvResult.getText().toString().equals("0")) {
+                if (tvResult.getText().toString().equals("0") || equalClicked) {
                     tvResult.setText("1");
+                    equalClicked = false;
                 } else {
                     tvResult.append("1");
                 }
-
                 if (isFirstVarClick) {
                     tvResult.setText("1");
                 }
                 isFirstVarClick = false;
                 break;
-
             case R.id.num_two:
-                if (tvResult.getText().toString().equals("0")) {
+                if (tvResult.getText().toString().equals("0") || equalClicked) {
                     tvResult.setText("2");
+                    equalClicked = false;
                 } else {
                     tvResult.append("2");
                 }
-
-
                 if (isFirstVarClick) {
                     tvResult.setText("2");
                 }
                 isFirstVarClick = false;
                 break;
-
             case R.id.num_three:
-
-                if (tvResult.getText().toString().equals("0")) {
+                if (tvResult.getText().toString().equals("0") || equalClicked) {
                     tvResult.setText("3");
+                    equalClicked = false;
                 } else {
                     tvResult.append("3");
-
                 }
-
-
                 if (isFirstVarClick) {
                     tvResult.setText("3");
                 }
                 isFirstVarClick = false;
                 break;
-
             case R.id.num_four:
-
-                if (tvResult.getText().toString().equals("0")) {
+                if (tvResult.getText().toString().equals("0") || equalClicked) {
                     tvResult.setText("4");
+                    equalClicked = false;
                 } else {
                     tvResult.append("4");
-
                 }
-
-
                 if (isFirstVarClick) {
                     tvResult.setText("4");
                 }
                 isFirstVarClick = false;
                 break;
-
             case R.id.num_five:
-
-                if (tvResult.getText().toString().equals("0")) {
+                if (tvResult.getText().toString().equals("0") || equalClicked) {
                     tvResult.setText("5");
+                    equalClicked = false;
                 } else {
                     tvResult.append("5");
-
                 }
-
                 if (isFirstVarClick) {
                     tvResult.setText("5");
                 }
                 isFirstVarClick = false;
                 break;
             case R.id.nuM_six:
-
-                if (tvResult.getText().toString().equals("0")) {
+                if (tvResult.getText().toString().equals("0") || equalClicked) {
                     tvResult.setText("6");
+                    equalClicked = false;
                 } else {
                     tvResult.append("6");
-
                 }
-
                 if (isFirstVarClick) {
                     tvResult.setText("6");
                 }
                 isFirstVarClick = false;
                 break;
-
             case R.id.num_seven:
-
-                if (tvResult.getText().toString().equals("0")) {
+                if (tvResult.getText().toString().equals("0") || equalClicked) {
                     tvResult.setText("7");
+                    equalClicked = false;
                 } else {
                     tvResult.append("7");
-
                 }
-
-
                 if (isFirstVarClick) {
                     tvResult.setText("7");
                 }
                 isFirstVarClick = false;
                 break;
-
             case R.id.num_eight:
-
-                if (tvResult.getText().toString().equals("0")) {
+                 if (tvResult.getText().toString().equals("0") || equalClicked) {
                     tvResult.setText("8");
-                } else {
+                     equalClicked = false;
+                 } else {
                     tvResult.append("8");
-
                 }
-
                 if (isFirstVarClick) {
                     tvResult.setText("8");
                 }
                 isFirstVarClick = false;
                 break;
-
             case R.id.num_nine:
-
-                if (tvResult.getText().toString().equals("0")) {
+                if (tvResult.getText().toString().equals("0") || equalClicked) {
                     tvResult.setText("9");
+                    equalClicked = false;
                 } else {
                     tvResult.append("9");
-
                 }
-
                 if (isFirstVarClick) {
                     tvResult.setText("9");
                 }
                 isFirstVarClick = false;
                 break;
-
             case R.id.num_zero:
-
-                if (tvResult.getText().toString().equals("0")) {
+                if (tvResult.getText().toString().equals("0") || equalClicked) {
                     tvResult.setText("0");
+                    equalClicked = false;
                 } else {
                     tvResult.append("0");
-
                 }
-
                 if (isFirstVarClick) {
                     tvResult.setText("0");
                 }
                 isFirstVarClick = false;
                 break;
-
             case R.id.clear:
                 tvResult.setText("0");
                 tvResult.setTextSize(70f);
                 break;
-
         }
     }
 
@@ -218,9 +189,9 @@ public class MainActivity extends AppCompatActivity {
 
 
             case R.id.equal:
+                equalClicked = true;
                 if (tvResult.getText().toString().equals("0")) {
                     tvResult.setText("0");
-
                 } else if (operation.equals("+")) {
                     plus = true;
                     String text = tvResult.getText().toString();
