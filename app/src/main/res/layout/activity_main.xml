@@ -14,6 +14,14 @@
         app:layout_constraintBottom_toTopOf="@+id/container"
         app:layout_constraintTop_toTopOf="parent">
 
+        <Button
+            android:id="@+id/btn_send_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="sendOperation"
+            android:text="@string/send_result"
+            android:visibility="gone"/>
+
         <TextView
             android:id="@+id/tv_result"
             android:layout_width="wrap_content"

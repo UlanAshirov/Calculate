@@ -4,4 +4,5 @@
     <dimen name="page_margin">12dp</dimen>
     <dimen name="element_margin">8dp</dimen>
     <dimen name="big_margin">24dp</dimen>
+    <dimen name="second_margin_horizontal">15dp</dimen>
 </resources>
